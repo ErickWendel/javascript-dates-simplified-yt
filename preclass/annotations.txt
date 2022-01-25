@@ -1,0 +1,30 @@
+nvm use 17
+
+node -p "new Date().toISOString()"
+// 2022-01-25T06:00:00.000Z
+
+
+go to regex101
+  paste 2022-01-25T14:41:41.637Z
+
+
+^([0-9]{4})
+            -
+                (0[1-9]|1[0-2])
+                                -
+                                    (0[1-9]|1[0-9]|2[0-9]|3[0-1])
+
+paste cases
+
+2022-01-25T14:41:41.637Z - correct
+2022-13-25T14:41:41.637Z - invalid month
+2022-00-25T14:41:41.637Z - invalid month
+2022-01-32T14:41:41.637Z - invalid day
+2022-01-00T14:41:41.637Z - invalid day
+0000-01-01T14:41:41.637Z - valid year but it shouldnt be
+
+
+touch index.mjs 
+all
+
+Regex on 101: https://regex101.com/r/2zPnLI/1
